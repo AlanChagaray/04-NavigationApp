@@ -1,0 +1,30 @@
+-------------------- DrawerNavigator --------------------
+
+Instalar paquetes Drawer Documentacion
+https://reactnavigation.org/docs/drawer-navigator/
+
+npm remove react-native-reanimated
+npm add react-native-reanimated@2.14.4
+
+Configuración
+babel.config.js
+plugins: ['react-native-reanimated/plugin'],
+
+-------------------- Icons ------------------------------
+
+https://github.com/oblador/react-native-vector-icons
+
+npm add react-native-vector-icons
+Android
+android/app/build.gradle  --> apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" --> todas las librerias
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'IonIcons.ttf' ] // Name of the font files you want to copy
+]
+
+use 
+import Icon from 'react-native-vector-icons/Ionicons';
+<Icon name="rocket" size={30} color="#900" />
+
+development
+npm add -D @types/react-native-vector-icons
